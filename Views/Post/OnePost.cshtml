@@ -1,0 +1,53 @@
+@{
+    ViewData["Title"] = "One Post";
+}
+
+@model Post
+
+<h1 class="display-4 fw-bold">@Model.Title</h1>
+<div class="d-flex">
+    <div>
+        <img src="@Model.Image" alt="@Model.Title" class="imgbig">
+    </div>
+    <div class="ms-3">
+        <h3>By: @Model.Creator.Name</h3>
+        <h3>Medium: @Model.Medium</h3>
+        @{
+            if (Model.ForSale == true)
+            {
+                <h3>For Sale</h3>
+            }
+            else
+            {
+                <h3>Not For Sale</h3>
+            }
+        }
+        <h3>@Model.LikesP.Count Like(s)</h3>
+        @{
+            if (Model.UserId == ViewBag.UserId)
+            {
+                <div class="d-flex align-items-center">
+                    <a asp-action="EditPost" asp-controller="Post" asp-route-id=@Model.PostId class="me-2">Edit</a>
+                    <form asp-action="DestroyPost" asp-controller="Post" asp-route-id=@Model.PostId method="post">
+                        <button class="btn btn-link">Delete</button>
+                    </form>
+                </div>
+            }
+            else if (Model.Liked(ViewBag.UserId) == 0)
+            {
+                <form asp-action="CreatePostLike" asp-controller="Post" asp-route-pid=@Model.PostId method="post">
+                    <input type="hidden" name="UserId" value=@ViewBag.UserId>
+                    <input type="hidden" name="PostId" value=@Model.PostId>
+                    <button class="btn btn-link text-decoration-none text-primary">Like</button>
+                </form>
+            }
+            else
+            {
+                <form asp-action="DestroyPostLike" asp-controller="Post" asp-route-id=@Model.Liked(ViewBag.UserId) asp-route-pid=@Model.PostId
+            method="post">
+                    <button class="btn btn-link text-decoration-none text-primary">Unlike</button>
+                </form>
+            }
+        }
+    </div>
+</div>

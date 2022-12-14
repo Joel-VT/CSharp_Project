@@ -1,0 +1,64 @@
+@{
+    ViewData["Title"] = "All Posts Page";
+}
+@model List<Post>
+
+
+<div class="d-flex">
+    @foreach (Post p in Model)
+    {
+        <div class="border border-dark p-2 m-2">
+            <img src="@p.Image" alt="@p.Title" class="smallimg d-block mb-3">
+            <a asp-action="OnePost" asp-controller="Post" asp-route-id=@p.PostId>@p.Title</a>
+            <p>By: @p.Creator.Name</p>
+            <p>Medium: @p.Medium</p>
+            @{
+                var diff = DateTime.Now - p.CreatedAt;
+                if(diff.Hours != 0)
+                {
+                    <p>Posted @diff.Hours hour(s) ago</p>
+                }
+                else
+                {
+                    <p>Posted @diff.Minutes minutes ago</p>
+                }
+            }
+            @{
+                if (p.ForSale == true)
+                {
+                    <p>For Sale</p>
+                }
+                else
+                {
+                    <p>Not For Sale</p>
+                }
+            }
+            <p>@p.LikesP.Count Like(s)</p>
+            @{
+                if (p.UserId == ViewBag.UserId)
+                {
+                    <div class="d-flex align-items-center">
+                        <a asp-action="EditPost" asp-controller="Post" asp-route-id=@p.PostId class="me-2">Edit</a>
+                        <form asp-action="DestroyPost" asp-controller="Post" asp-route-id=@p.PostId method="post">
+                            <button class="btn btn-link">Delete</button>
+                        </form>
+                    </div>
+                }
+                else if (p.Liked(ViewBag.UserId) == 0)
+                {
+                    <form asp-action="CreateLike" asp-controller="Post" method="post">
+                        <input type="hidden" name="UserId" value=@ViewBag.UserId>
+                        <input type="hidden" name="PostId" value=@p.PostId>
+                        <button class="btn btn-link">Like</button>
+                    </form>
+                }
+                else
+                {
+                    <form asp-action="DestroyLike" asp-controller="Post" asp-route-id=@p.Liked(ViewBag.UserId) method="post">
+                        <button class="btn btn-link">Unlike</button>
+                    </form>
+                }
+            }
+        </div>
+    }
+</div>

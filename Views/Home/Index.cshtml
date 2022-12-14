@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_InitialLayout";
+}
+@model User
+<h1 class="display-4">Welcome to Artstagram!</h1>
+<div class="text-center d-flex justify-content-around">
+    <div class="flex-2 m-3 border border-dark p-2">
+        <h2>Register</h2>
+        <form asp-action="CreateUser" asp-controller="Home" method="post">
+            <div class="row g-3 align-items-center mx-auto mb-3">
+                <div class="col-auto">
+                    <label asp-for="Name"></label>
+                </div>
+                <div class="col-auto">
+                    <input asp-for="Name" class="form-control">
+                </div>
+            </div>
+            <div class="mb-3">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="row g-3 align-items-center mx-auto mb-3">
+                <div class="col-auto">
+                    <label asp-for="Email"></label>
+                </div>
+                <div class="col-auto">
+                    <input asp-for="Email" class="form-control">
+                </div>
+            </div>
+            <div class="mb-3">
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="row g-3 align-items-center mx-auto mb-3">
+                <div class="col-auto">
+                    <label asp-for="Password"></label>
+                </div>
+                <div class="col-auto">
+                    <input asp-for="Password" class="form-control">
+                </div>
+            </div>
+            <small>**Password must be atleast 8 characters</small>
+            <div class="mb-3">
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="row g-3 align-items-center mx-auto mb-3">
+                <div class="col-auto">
+                    <label asp-for="Confirm"></label>
+                </div>
+                <div class="col-auto">
+                    <input asp-for="Confirm" class="form-control">
+                </div>
+            </div>
+            <div class="mb-3">
+                <span asp-validation-for="Confirm" class="text-danger"></span>
+            </div>
+            <button class="btn btn-primary mt-2">Register</button>
+        </form>
+    </div>
+    <div class="flex-1 m-3 border border-dark p-2">
+        <h2>Login</h2>
+        @await Html.PartialAsync("_Login")
+    </div>
+</div>
+

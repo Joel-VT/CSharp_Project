@@ -1,0 +1,37 @@
+@{
+    ViewData["Title"] = "Edit Post";
+}
+
+@model Post
+<h2 class="mb-5">Edit Post</h2>
+
+<form asp-action="UpdatePost" asp-controller="Post" asp-route-id=@Model.PostId method="post">
+    <div class="mb-3">
+        <label asp-for="Image">Image (URL Format please)</label>
+        <input asp-for="Image" class="form-control">
+        <span asp-validation-for="Image" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" class="form-control">
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Medium"></label>
+        <input asp-for="Medium" class="form-control">
+        <span asp-validation-for="Medium" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <input type="checkbox" asp-for="ForSale">
+        <label asp-for="ForSale">For Sale?</label>
+        <span asp-validation-for="ForSale" class="text-danger"></span>
+    </div>
+    @{
+        int? UserId = Context.Session.GetInt32("UserId");
+        <input type="hidden" asp-for="UserId" value=@UserId>
+    }
+    <button class="btn btn-primary mt-2">Update</button>
+</form>

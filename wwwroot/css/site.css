@@ -1,0 +1,30 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.smallimg {
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+}
+
+.imgbig {
+  width: 400px;
+  height: 400px;
+  border: 2px solid black;
+}

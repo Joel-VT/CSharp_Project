@@ -1,0 +1,68 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CSharpBelt
+build_property.RootNamespace = CSharpBelt
+build_property.ProjectDir = /Users/joelvarghesethomas/Desktop/Projects/CSHARP_Stack/CSharpBelt/
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/joelvarghesethomas/Desktop/Projects/CSHARP_Stack/CSharpBelt
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/joelvarghesethomas/Desktop/Projects/CSHARP_Stack/CSharpBelt/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/joelvarghesethomas/Desktop/Projects/CSHARP_Stack/CSharpBelt/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/joelvarghesethomas/Desktop/Projects/CSHARP_Stack/CSharpBelt/Views/Home/_Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9fTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/joelvarghesethomas/Desktop/Projects/CSHARP_Stack/CSharpBelt/Views/Post/EditPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdC9FZGl0UG9zdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/joelvarghesethomas/Desktop/Projects/CSHARP_Stack/CSharpBelt/Views/Post/NewPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdC9OZXdQb3N0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/joelvarghesethomas/Desktop/Projects/CSHARP_Stack/CSharpBelt/Views/Post/OnePost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdC9PbmVQb3N0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/joelvarghesethomas/Desktop/Projects/CSHARP_Stack/CSharpBelt/Views/Post/Posts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdC9Qb3N0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/joelvarghesethomas/Desktop/Projects/CSHARP_Stack/CSharpBelt/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/joelvarghesethomas/Desktop/Projects/CSHARP_Stack/CSharpBelt/Views/Shared/_InitialLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Jbml0aWFsTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/joelvarghesethomas/Desktop/Projects/CSHARP_Stack/CSharpBelt/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/joelvarghesethomas/Desktop/Projects/CSHARP_Stack/CSharpBelt/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/joelvarghesethomas/Desktop/Projects/CSHARP_Stack/CSharpBelt/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/joelvarghesethomas/Desktop/Projects/CSHARP_Stack/CSharpBelt/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-2jyhivcs7i
